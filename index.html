@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Agrawal Grocery Supermarket </title>
+</head>
+
+<style>
+
+#navbar
+{
+    width: 90%  ;
+    margin: auto  ;
+    display: flex ;
+}
+
+#navbarflex
+{   width: 50%  ;
+    display: flex ;
+    margin: auto  ;
+    justify-content: space-between  ;
+}
+
+
+#logo
+{
+    width: 20% ;
+}
+
+#popup
+{
+    display: none ;
+}
+
+#cart img
+{
+    width: 50px  ;
+}
+
+#search 
+{   
+    display: flex;
+    align-items: start  ;
+}
+
+#search input
+{
+    font-size: 25px ;
+}
+
+#login
+{
+    font-size: 20px ;
+}
+
+#search img
+{
+    height: 32px  ;
+}
+
+#itemcount
+{
+    font-size: 20px  ;
+}
+
+
+
+</style>
+
+<body>
+
+
+    
+<div id="navbar">
+
+    <img id="logo" src="./Online Grocery Supermarket.png" />
+    
+    <div id="navbarflex">
+
+        <div id="search">
+          <input type="search" placeholder="Search for Products.. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " />
+          <img src="./download.png" >
+        </div>
+
+        <p id="login"> Login / Sign Up </p>
+
+        <div >
+            <form id="popup" >  
+              <input id="email" type="email" placeholder="Enter Your Email" />
+              <input id="pass" type="password" placeholder="Enter Password"  />
+              <input id="submit" type="submit" value="Continue" /> 
+            </form>   
+        </div>
+
+        <div id="cart">
+          <img src="./images.jpeg"/>
+          
+        </div>
+
+        <p id="itemcount"> Cart - 0 items </p>
+    </div>
+</div>
+
+</body>
+</html>
