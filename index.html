@@ -10,6 +10,11 @@
 
 <style>
 
+body
+{
+    background-color: rgb(25, 25, 25)  ;
+}
+
 #navbar
 {
     width: 90%  ;
@@ -30,6 +35,11 @@
     width: 300px  ;
 }
 
+#category
+{
+    font-size: 30px ;
+}
+
 #popup
 {
     display: none ;
@@ -37,7 +47,7 @@
 
 #cart
 {
-    width: 50px  ;
+    width: 60px  ;
 }
 
 #search 
@@ -48,17 +58,17 @@
 
 #search input
 {
-    font-size: 25px ;
+    font-size: 30px ;
 }
 
 #login
 {
-    font-size: 20px ;
+    font-size: 25px ;
 }
 
 #search img
 {
-    height: 34px  ;
+    height: 40px  ;
 }
 
 #itemcount
@@ -80,6 +90,20 @@
     
     <div id="navbarflex">
 
+        <div>
+            <select name="category" id="category"> 
+                <option value="1"> Fruits & Vegetables </option>
+                <option value="2"> Foodgrains, Oil & Masala </option>
+                <option> Bakery, Cakes & dairy </option>
+                <option> Snacks & Branded Foods </option>
+                <option>  Beauty & Hygiene </option>
+                <option> Cleaning & Household </option>
+                <option> Baby & Care </option>
+                <option> Kitchen, Garden & Pets </option>
+                <option value="9" ></option>> View All </option>
+            </select>
+        </div>
+
         <div id="search">
           <input type="search" placeholder="Search for Products.. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " />
           <img src="./download.png" >
@@ -92,15 +116,14 @@
               <input id="submit" type="submit" value="Continue" /> 
             </form>   
         </div>
+   
 
-        <p id="login"> Login / Sign Up </p>
-
-        <div >
+        <div > 
           <img id="cart" src="./images.jpeg"/>
-          <p id="itemcount"> Cart - 0 items </p>
+          <p id="itemcount"> 0 items </p>
         </div>
 
-        
+        <p id="login"> Login / Sign Up </p>
     </div>
 </div>
 
