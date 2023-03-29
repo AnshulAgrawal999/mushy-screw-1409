@@ -18,16 +18,16 @@
 }
 
 #navbarflex
-{   width: 50%  ;
+{   width: 80%  ;
     display: flex ;
     margin: auto  ;
     justify-content: space-between  ;
+    height: 50px  ;
 }
-
 
 #logo
 {
-    width: 20% ;
+    width: 300px  ;
 }
 
 #popup
@@ -35,7 +35,7 @@
     display: none ;
 }
 
-#cart img
+#cart
 {
     width: 50px  ;
 }
@@ -58,7 +58,7 @@
 
 #search img
 {
-    height: 32px  ;
+    height: 34px  ;
 }
 
 #itemcount
@@ -85,8 +85,6 @@
           <img src="./download.png" >
         </div>
 
-        <p id="login"> Login / Sign Up </p>
-
         <div >
             <form id="popup" >  
               <input id="email" type="email" placeholder="Enter Your Email" />
@@ -95,12 +93,14 @@
             </form>   
         </div>
 
-        <div id="cart">
-          <img src="./images.jpeg"/>
-          
+        <p id="login"> Login / Sign Up </p>
+
+        <div >
+          <img id="cart" src="./images.jpeg"/>
+          <p id="itemcount"> Cart - 0 items </p>
         </div>
 
-        <p id="itemcount"> Cart - 0 items </p>
+        
     </div>
 </div>
 
