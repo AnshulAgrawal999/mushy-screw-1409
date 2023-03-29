@@ -32,7 +32,7 @@ body
 
 #logo
 {
-    width: 300px  ;
+    width: 200px  ;
 }
 
 #category
@@ -41,13 +41,13 @@ body
 }
 
 #popup
-{
+{   
     display: none ;
 }
 
 #cart
 {
-    width: 60px  ;
+    width: 40px  ;
 }
 
 #search 
@@ -63,7 +63,7 @@ body
 
 #login
 {
-    font-size: 25px ;
+    font-size: 20px ;
 }
 
 #search img
@@ -76,36 +76,65 @@ body
     font-size: 20px  ;
 }
 
+/* footer css  */
+footer {
+  width: 100%  ;
+  background-color: rgb(18, 17, 17)  ;
+  margin-top: 50px  ;
+  font-size: 20px ;
+}
+.f1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  padding-bottom: 10px;
+}
+.f-flex1 {
+  display: flex;
+  flex-direction: column;
+}
+.f-flex1 img {
+  width: 140px  ;
+}
+.f-flex1 p,h3 {
+  color: white;
+  line-height: 10px;
+}
+
+#copyright
+{
+    text-align: center  ;
+}
 
 
 </style>
 
 <body>
 
-
     
 <div id="navbar">
 
-    <img id="logo" src="./Online Grocery Supermarket.png" />
+    <img id="logo" src="./Agrawal.png" />
     
     <div id="navbarflex">
 
         <div>
-            <select name="category" id="category"> 
+            <select id="category" name="category" > 
                 <option value="1"> Fruits & Vegetables </option>
-                <option value="2"> Foodgrains, Oil & Masala </option>
+                <option > Foodgrains, Oil & Masala </option>
                 <option> Bakery, Cakes & dairy </option>
                 <option> Snacks & Branded Foods </option>
                 <option>  Beauty & Hygiene </option>
                 <option> Cleaning & Household </option>
                 <option> Baby & Care </option>
                 <option> Kitchen, Garden & Pets </option>
-                <option value="9" ></option>> View All </option>
+                <option value="9"> View All </option>
             </select>
         </div>
 
         <div id="search">
-          <input type="search" placeholder="Search for Products.. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " />
+          <input type="search" placeholder="Search for Products..  " />
           <img src="./download.png" >
         </div>
 
@@ -126,6 +155,34 @@ body
         <p id="login"> Login / Sign Up </p>
     </div>
 </div>
+
+<footer>
+    <div class="f1">
+        <div class="f-flex1">
+            <p>About Us</p>
+            <p>In News</p>
+            <p>Privacy Policy</p>
+            <p>Affiliate</p>
+            <p>Terms and Conditins</p>
+        </div>
+        <div class="f-flex1">
+            <p>Help</p>
+            <p>FAQs</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="f-flex1">
+            <p> Download Our App </p>
+            <div class="store">
+                <img src="./download (5).png" >
+            </div>   
+        </div>
+    </div>
+
+    <div id="copyright">
+        Copyright 2023 Agrawal Grocery SuperMarket Pvt. Ltd.
+    </div>
+
+</footer>
 
 </body>
 </html>
