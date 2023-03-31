@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +10,7 @@
 
 <style>
 
+/* navbar css  */
 body
 {
     background-color: rgb(25, 25, 25)  ;
@@ -17,13 +18,14 @@ body
 
 #navbar
 {
-    width: 90%  ;
+    width: 95%  ;
     margin: auto  ;
     display: flex ;
 }
 
 #navbarflex
-{   width: 80%  ;
+{   
+    width: 80%  ;
     display: flex ;
     margin: auto  ;
     justify-content: space-between  ;
@@ -37,7 +39,7 @@ body
 
 #category
 {
-    font-size: 30px ;
+    font-size: 25px ;
 }
 
 #popup
@@ -58,7 +60,7 @@ body
 
 #search input
 {
-    font-size: 30px ;
+    font-size: 25px ;
 }
 
 #login
@@ -68,7 +70,7 @@ body
 
 #search img
 {
-    height: 40px  ;
+    height: 35px  ;
 }
 
 #itemcount
@@ -76,43 +78,79 @@ body
     font-size: 20px  ;
 }
 
+/* main css  */
+
+#headpart
+{
+    width: 95%  ;
+    display: flex  ;
+    justify-content: space-between  ;
+    align-items: end  ;
+}
+
+#pricesort
+{
+    font-size: 20px  ;       
+}
+
+#cont
+{   
+    width: 85%  ;
+    margin: auto  ;
+    display: grid ;
+    grid-template-columns: repeat( 4 , 1fr )  ;
+    gap: 25px  ;
+}
+
+#card
+{
+    border: 1px solid black ;
+    line-height: 10px  ;
+    text-align: center  ;
+    background-color: whitesmoke ;
+}
+
 /* footer css  */
-footer {
+footer 
+{
   width: 100%  ;
   background-color: rgb(18, 17, 17)  ;
   margin-top: 50px  ;
   font-size: 20px ;
 }
-.f1 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  padding-top: 50px;
-  padding-bottom: 10px;
+#fbox 
+{
+  display: flex  ;
+  flex-direction: row  ;
+  justify-content: space-around ;
+  padding-top: 50px  ;
+  padding-bottom: 10px  ;
 }
-.f-flex1 {
-  display: flex;
-  flex-direction: column;
+.column 
+{
+  display: flex  ;
+  flex-direction: column  ;
 }
-.f-flex1 img {
+.column img 
+{
   width: 140px  ;
 }
-.f-flex1 p,h3 {
-  color: white;
-  line-height: 10px;
+.column p
+{
+  color: white  ;
+  line-height: 8px  ;
 }
 
 #copyright
 {
     text-align: center  ;
+    padding-bottom: 20px  ;
 }
-
 
 </style>
 
 <body>
-
-    
+  
 <div id="navbar">
 
     <img id="logo" src="./Agrawal.png" />
@@ -156,23 +194,47 @@ footer {
     </div>
 </div>
 
+
+<div id="main">
+    <div id="box">
+        
+        <div id="headpart">
+            <h2> Fruits & Vegetables </h2>
+
+            <select id="pricesort" >    
+                <option value="Popularity"> Popularity </option>
+                <option value="price Low to High"> price Low to High </option>
+                <option value="price High to Low"> price High to Low </option>
+                <option value=""> </option>
+            </select>
+        </div>
+
+        <hr>
+
+        <div id="cont">
+
+        </div>
+    </div>
+</div>  
+
+
 <footer>
-    <div class="f1">
-        <div class="f-flex1">
+    <div id="fbox">
+        <div class="column">
             <p>About Us</p>
             <p>In News</p>
             <p>Privacy Policy</p>
             <p>Affiliate</p>
             <p>Terms and Conditins</p>
         </div>
-        <div class="f-flex1">
+        <div class="column">
             <p>Help</p>
             <p>FAQs</p>
             <p>Contact Us</p>
         </div>
-        <div class="f-flex1">
+        <div class="column">
             <p> Download Our App </p>
-            <div class="store">
+            <div id="store">
                 <img src="./download (5).png" >
             </div>   
         </div>
@@ -185,4 +247,7 @@ footer {
 </footer>
 
 </body>
+
+<script src="./product.js"></script>
+
 </html>
