@@ -744,3 +744,17 @@ function filterprice()
 }
 
 displaydata( ordered )  ;
+
+const search = document.getElementById("str");
+
+search.addEventListener("input", function(){
+    let filtered = products.filter(function(el){
+        if(el.name.toUpperCase().includes(search.value.toUpperCase())=== true){
+            return true
+        }
+        else{
+            return false;
+        }
+    })
+    displaydata(filtered)  ;
+})
