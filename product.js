@@ -633,6 +633,12 @@ for ( let j = 0 ; j < products.length ; j++ )
 
 const cont = document.getElementById("cont")  ; 
 
+const itemcount = document.getElementById("itemcount")  ; 
+
+let count = ( localStorage.getItem( "count" ) || 0 )  ;
+
+itemcount.innerText = `${count} items`  ;
+
 function displaydata( data )  
 {
   cont.innerHTML = null  ;
@@ -650,6 +656,7 @@ for ( let i = 0 ; i < data.length ; i++ )
   const Kg = this.document.createElement("p")  ;
   const strike = this.document.createElement("p")  ;
   const mrp = this.document.createElement("p")  ;
+  const add = this.document.createElement("button")  ;
   const dur = this.document.createElement("p")  ;
 
   discount.innerText = data[i].discount  ;
@@ -668,9 +675,20 @@ for ( let i = 0 ; i < data.length ; i++ )
 
   mrp.innerText =  `Discount Price - ₹ ${data[i].mrp}`  ;
 
+  add.innerText = "ADD"  ;
+
   dur.innerText = data[i].dur  ;
-  
-  card.append ( discount , img , brand , itemname , Kg , strike , mrp , dur )  ;
+
+  add.addEventListener( "click" , function()
+  {
+      count++  ;
+
+      localStorage.setItem( "count" , count )  ;
+
+      itemcount.innerText = `${count} items`  ;
+  })
+
+  card.append ( discount , img , brand , itemname , Kg , strike , mrp , add , dur )  ;
 
   cont.append( card )  ;
 }
