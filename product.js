@@ -1,4 +1,4 @@
-let products = [
+const products = [
   {
     discount: "Get 20% OFF "  ,
     imgurl:
@@ -7,7 +7,7 @@ let products = [
     name: "Onion",
     Kg: "5 Kg",
     strike: "120",
-    mrp: 115,
+    mrp: 115 ,
     dur: "Standard Delivery 22 June  9:00 AM  1:30 PM",
   },
   {
@@ -18,7 +18,7 @@ let products = [
     name: "Patato",
     Kg: "2 kg",
     strike: "87.50",
-    mrp: 70,
+    mrp: 70 ,
     dur: "Standard Delivery 22 June  9:00 AM  1:30 PM",
   },
 
@@ -453,8 +453,8 @@ let products = [
     brand: "USA",
     name: "Pear - Green, Imported",
     Kg: "3x2pcs ",
-    strike: "105",
-    mrp: 126,
+    strike: "126",
+    mrp: 105,
     dur: "Standard Delivery  22 June  9:00AM - 1:30PM  ",
   },
   {
@@ -622,15 +622,22 @@ let products = [
     mrp: 59,
     dur: "Standard Delivery: Out of stock",
   },
-];
+]  ;
 
+const ordered = new Array(products.length)  ;
+
+for ( let j = 0 ; j < products.length ; j++ )
+{
+   ordered[j]= products[j]  ;
+}
 
 const cont = document.getElementById("cont")  ; 
 
-window.addEventListener ( "load" , function()
+function displaydata( data )  
 {
+  cont.innerHTML = null  ;
 
-for ( let i = 0 ; i < products.length ; i++ )
+for ( let i = 0 ; i < data.length ; i++ )
 {
   const card = this.document.createElement("div")  ;
 
@@ -645,29 +652,77 @@ for ( let i = 0 ; i < products.length ; i++ )
   const mrp = this.document.createElement("p")  ;
   const dur = this.document.createElement("p")  ;
 
-  discount.innerText = products[i].discount  ;
+  discount.innerText = data[i].discount  ;
 
   discount.style.color = "red"  ;
 
-  img.setAttribute( "src" , products[i].imgurl )  ;
+  img.setAttribute( "src" , data[i].imgurl )  ;
 
-  brand.innerText = products[i].brand  ;
+  brand.innerText = data[i].brand  ;
 
-  itemname.innerText = products[i].name  ;
+  itemname.innerText = data[i].name  ;
 
-  Kg.innerText = products[i].Kg  ;
+  Kg.innerText = data[i].Kg  ;
 
-  strike.innerText = products[i].strike  ;
+  strike.innerText =  `MRP - ₹ ${data[i].strike}`  ;
 
-  mrp.innerText = products[i].mrp  ;
+  mrp.innerText =  `Discount Price - ₹ ${data[i].mrp}`  ;
 
-  dur.innerText = products[i].dur  ;
-
+  dur.innerText = data[i].dur  ;
   
   card.append ( discount , img , brand , itemname , Kg , strike , mrp , dur )  ;
 
   cont.append( card )  ;
 }
 
-})
+}
 
+document.querySelector("#pricesort").addEventListener("change", filterprice )  ;
+
+function filterprice() 
+{
+  let x = document.querySelector("#pricesort").value  ;
+
+  if (x == "MRP Low to High") {
+    products.sort(function (a, b) {
+      if (+a.strike > +b.strike ) return 1  ;
+      if (+a.strike < +b.strike) return -1  ;
+      else return 0  ;
+    });
+    displaydata( products )  ;
+  }
+
+  else if (x == "MRP High to Low") {
+    products.sort(function (a, b) {
+      if (+a.strike > +b.strike) return -1  ;
+      if (+a.strike < +b.strike) return 1  ;
+      else return 0  ;
+    });
+    displaydata( products )  ;
+  }
+
+  else if (x == "price Low to High") {
+    products.sort(function (a, b) {
+      if (a.mrp > b.mrp) return 1  ;
+      if (a.mrp < b.mrp) return -1  ;
+      else return 0  ;
+    });
+    displaydata( products )  ;
+  }
+
+  else if (x == "price High to Low") {
+    products.sort(function (a, b) {
+      if (a.mrp > b.mrp) return -1  ;
+      if (a.mrp < b.mrp) return 1  ;
+      else return 0  ;
+    });
+    displaydata( products )  ;
+  }
+
+  else
+  { 
+    displaydata( ordered )  ;
+  }
+}
+
+displaydata( ordered )  ;
