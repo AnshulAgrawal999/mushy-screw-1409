@@ -745,7 +745,7 @@ function filterprice()
 
 displaydata( ordered )  ;
 
-const search = document.getElementById("str");
+const search = document.getElementById("str")  ;
 
 search.addEventListener("input", function(){
     let filtered = products.filter(function(el){
@@ -757,4 +757,12 @@ search.addEventListener("input", function(){
         }
     })
     displaydata(filtered)  ;
+})
+
+const cartarea = document.getElementById("cartarea")  ;
+
+cartarea.addEventListener( "click" , function(){
+
+  window.location.href= "basket.html"  ;
+
 })
