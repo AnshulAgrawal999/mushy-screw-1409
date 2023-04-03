@@ -5,14 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Agrawal Grocery Supermarket login </title>
+
+<style>
+body {  
+  background-color: rgb(25, 25, 25)  
+}
+
+#navbar
+{
+    width: 95%  ;
+    margin: auto  ;
+    display: flex ;
+    justify-content: space-between  ;
+}
+
+#navbarflex
+{   
+    height: 50px  ;
+}
+
+#logo
+{
+    width: 200px  ;
+}
+
+#popup
+{   
+    display: none ;
+}
+
+#login
+{
+    font-size: 20px ;
+}
+
+</style>
+
 </head>
 <body>
 
+    <div id="navbar">
+
+        <img id="logo" src="./Agrawal.png" />
+          
+        <div id="navbarflex">
+      
+              <div >
+                  <form id="popup" >           
+                    <input id="name" type="text" placeholder="Enter Your name" >
+                    <input id="email" type="email" placeholder="Enter Your Email" />
+                    <input id="pass" type="password" placeholder="Enter Password"  />
+                    <input id="submit" type="submit" value="Continue" /> 
+                  </form>   
+              </div>
+      
+              <a href="./signup.html"> <p id="login"> Login / Sign Up </p> </a>
+        </div>
+      </div>
+
 <div id="cont">
 
-    <div id="logo">
-        <img src="/Agrawal.png" alt="">
-    </div>
     <h1>Login to your account</h1>
     <form autocomplete="on">
         <table>
