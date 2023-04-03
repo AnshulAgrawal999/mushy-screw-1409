@@ -7,8 +7,9 @@
     <title> Agrawal Grocery Supermarket signup </title>
 
 <style>
+    /* navbar css  */
 body {  
-  background-color: rgb(25, 25, 25)  
+  background-color: rgb(25, 25, 25)  ;
 }
 
 #navbar
@@ -39,6 +40,44 @@ body {
     font-size: 20px ;
 }
 
+
+/* footer css  */
+footer 
+{
+  width: 100%  ;
+  background-color: rgb(18, 17, 17)  ;
+  margin-top: 50px  ;
+  font-size: 20px ;
+}
+#fbox 
+{
+  display: flex  ;
+  flex-direction: row  ;
+  justify-content: space-around ;
+  padding-top: 50px  ;
+  padding-bottom: 10px  ;
+}
+.column 
+{
+  display: flex  ;
+  flex-direction: column  ;
+}
+.column img 
+{
+  width: 140px  ;
+}
+.column p
+{
+  color: white  ;
+  line-height: 8px  ;
+}
+
+#copyright
+{
+    text-align: center  ;
+    padding-bottom: 20px  ;
+}
+
 </style>
 
 </head>
@@ -50,15 +89,6 @@ body {
         <img id="logo" src="./Agrawal.png" />
           
         <div id="navbarflex">
-      
-              <div >
-                  <form id="popup" >           
-                    <input id="name" type="text" placeholder="Enter Your name" >
-                    <input id="email" type="email" placeholder="Enter Your Email" />
-                    <input id="pass" type="password" placeholder="Enter Password"  />
-                    <input id="submit" type="submit" value="Continue" /> 
-                  </form>   
-              </div>
       
               <a href="./signup.html"> <p id="login"> Login / Sign Up </p> </a>
         </div>
@@ -98,6 +128,37 @@ body {
 
     <h3>Already have account?<a href="./login.html"><span>Login</span> </a></h3>
        </div>
+
+
+       <footer>
+        <div id="fbox">
+            <div class="column">
+                <p>About Us</p>
+                <p>In News</p>
+                <p>Privacy Policy</p>
+                <p>Affiliate</p>
+                <p>Terms and Conditins</p>
+            </div>
+            <div class="column">
+                <p>Help</p>
+                <p>FAQs</p>
+                <p>Contact Us</p>
+            </div>
+            <div class="column">
+                <p> Download Our App </p>
+                <div id="store">
+                    <img src="./download (5).png" >
+                </div>   
+            </div>
+        </div>
+    
+        <div id="copyright">
+            Copyright 2023 Agrawal Grocery SuperMarket Pvt. Ltd.
+        </div>
+    
+    </footer>
+
+
 </body>
 
 <script src="./signup.js"></script>
