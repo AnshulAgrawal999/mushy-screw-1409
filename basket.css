@@ -21,11 +21,6 @@ body {
     width: 200px  ;
 }
 
-#popup
-{   
-    display: none ;
-}
-
 #login
 {
     font-size: 20px ;
@@ -33,6 +28,7 @@ body {
 
 
 /* --------main------------ */
+
 #main {
   width: 80%;
   margin: auto;
@@ -166,6 +162,7 @@ th:last-child {
   background-color: #c6cc74;
   color: black;
 }
+
 
 /* --------footer------------ */
 
