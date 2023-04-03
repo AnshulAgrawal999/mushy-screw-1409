@@ -21,6 +21,7 @@ body {
 #logo
 {
     width: 200px  ;
+    cursor: pointer  ;
 }
 
 #login
@@ -191,15 +192,18 @@ footer
 .column img 
 {
   width: 140px  ;
+  cursor: pointer  ;
 }
 .column p
 {
   color: white  ;
   line-height: 8px  ;
+  cursor: pointer  ;
 }
 
 #copyright
 {
     text-align: center  ;
     padding-bottom: 20px  ;
+    cursor: pointer  ;
 }
